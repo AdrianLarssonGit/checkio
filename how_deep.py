@@ -1,5 +1,5 @@
 def how_deep(structure):
-    # your code here
+
     structure_as_string = ''.join(str(structure))
 
     list_of_openings = []
