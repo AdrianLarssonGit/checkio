@@ -7,11 +7,11 @@ def reverse_ascending(items):
     counter = 0
     while counter < len(items):
         i = items[counter]
-        if counter+1 == len(items):
+        if counter + 1 == len(items):
             next_i_temp = items[-1:]
             next_i = next_i_temp[0]
         else:
-            next_i = items[counter+1]
+            next_i = items[counter + 1]
 
         if next_i == i:
             start_list.append(i)
@@ -37,9 +37,8 @@ def reverse_ascending(items):
         for item in list:
             final_list.append(item)
 
-    return(final_list)
-
+    return (final_list)
 
 
 if __name__ == '__main__':
-    print(reverse_ascending([5, 7, 10, 4, 2, 7, 8, 1, 3]))
+    print(reverse_ascending([1,2,1]))
