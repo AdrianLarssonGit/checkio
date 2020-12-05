@@ -5,7 +5,6 @@ def reverse_ascending(items):
     list_of_lists_to_be_reversed = []
     start_list = []
     counter = 0
-    bajslist = []
     while counter < len(items):
         i = items[counter]
         if counter + 1 == len(items):
@@ -39,8 +38,8 @@ def reverse_ascending(items):
         for item in list:
             final_list.append(item)
 
-    return (final_list)
+    return final_list
 
 
 if __name__ == '__main__':
-    print(reverse_ascending([5,7,10,4,2,7,8,1,3]))
+    print(reverse_ascending([1,1,2]))
