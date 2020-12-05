@@ -19,9 +19,9 @@ def reverse_ascending(items):
         elif next_i > i:
             start_list.append(i)
         elif next_i <= i:
+            start_list.append(i)
             list_of_lists_to_be_reversed.append(start_list)
             start_list = []
-            start_list.append(i)
         else:
             start_list.append(i)
             list_of_lists_to_be_reversed.append(start_list)
@@ -29,7 +29,6 @@ def reverse_ascending(items):
         counter += 1
 
     list_of_lists_to_be_reversed.append(start_list)
-    print(list_of_lists_to_be_reversed)
     for list in list_of_lists_to_be_reversed:
         list.reverse()
 
@@ -38,12 +37,9 @@ def reverse_ascending(items):
         for item in list:
             final_list.append(item)
 
-    print(final_list)
+    return(final_list)
 
-
-    # your code here
-    return None
 
 
 if __name__ == '__main__':
-    print(reverse_ascending([1, 2, 3, 4, 5]))
+    print(reverse_ascending([5, 7, 10, 4, 2, 7, 8, 1, 3]))
