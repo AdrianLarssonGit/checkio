@@ -1,11 +1,7 @@
 #After some thinking I got to this instead 
 def reverse_ascending(items):
-    # your code here
-    result = []
-    resultlist = []
 
-    if not items:
-        return resultlist
+    result_list = []
 
     temp = []
     temp.append(items[0])
@@ -14,16 +10,17 @@ def reverse_ascending(items):
         if items[i-1] < items[i]:
             temp.append(items[i])
         else:
-            resultlist.append(temp)
+            result_list.append(temp)
             temp = [items[i]]
             
     if temp:
-        resultlist.append(temp)
+        result_list.append(temp)
     
-    resultlist = [sorted(i, reverse=True) for i in resultlist]
+    result_list = [sorted(i, reverse=True) for i in result_list]
 
 
-    for i in resultlist:
+    result = []
+    for i in result_list:
         result += i
 
     return result
@@ -32,7 +29,7 @@ def reverse_ascending(items):
 
 if __name__ == '__main__':
     print("Example:")
-    print(reverse_ascending([1, 2, 3, 4, 5]))
+    print(reverse_ascending([1,1,2]))
 
     # These "asserts" are used for self-checking and not for an auto-testing
     assert list(reverse_ascending([1, 2, 3, 4, 5])) == [5, 4, 3, 2, 1]
